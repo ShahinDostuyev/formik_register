@@ -1,9 +1,9 @@
-import AddCustomer from "./pages/AddCustomer";
+import FormikRegisterForm from "./pages/FormikRegisterForm";
 
 function App() {
   return (
     <>
-    <AddCustomer/>
+    <FormikRegisterForm/>
     </>
   );
 }

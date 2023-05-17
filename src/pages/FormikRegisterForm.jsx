@@ -2,8 +2,8 @@ import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
-function AddCustomer() {
-  const addCustomerValidationSchema = Yup.object().shape({
+function FormikRegisterForm() {
+  const addRegistrationValidationSchema = Yup.object().shape({
     name: Yup.string()
       .required("Name field could not be empty!")
       .max(50, "Name can not be more than 50 characters!"),
@@ -33,7 +33,7 @@ function AddCustomer() {
       password: "",
       confirmPassword: "",
     },
-    validationSchema: addCustomerValidationSchema,
+    validationSchema: addRegistrationValidationSchema,
 
     validate: (values) => {
       const errors = {};
@@ -125,4 +125,4 @@ function AddCustomer() {
   );
 }
 
-export default AddCustomer;
+export default FormikRegisterForm;
